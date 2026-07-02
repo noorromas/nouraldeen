@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
-
 <html dir="rtl" lang="ar">
 <head>
 <meta charset="utf-8"/>
 <title>التواصل للتصاميم الاحترافية</title>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&amp;display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
 <style>
 :root{
   --bg:#0a0a0a;
@@ -16,41 +16,115 @@
   --text:#f5f5f5;
   --shadow:0 4px 14px rgba(255,215,0,.25);
 }
-body.light{--bg:#ffffff;--card:#f2f2f2;--gold:#d4af37;--text:#222;--shadow:0 4px 12px rgba(0,0,0,.12);}
+
+body.light{
+  --bg:#ffffff;
+  --card:#f2f2f2;
+  --gold:#d4af37;
+  --text:#222;
+  --shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:'Tajawal',sans-serif;padding:18px;transition:.4s}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Tajawal',sans-serif;
+  padding:18px;
+  transition:.4s;
+}
 
 /* Logo */
-.logo{width:388px;height:125px;object-fit:contain;border:3px solid var(--gold);border-radius:12px;display:block;margin:0 auto 20px;
-animation:float 6s ease-in-out infinite, glow 3s ease-in-out infinite;}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-@keyframes glow{0%{box-shadow:0 0 6px var(--gold)}50%{box-shadow:0 0 20px var(--gold)}100%{box-shadow:0 0 6px var(--gold)}}
+.logo{
+  width:388px;
+  height:125px;
+  object-fit:contain;
+  border:3px solid var(--gold);
+  border-radius:12px;
+  display:block;
+  margin:0 auto 20px;
+  animation:float 6s ease-in-out infinite, glow 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+
+@keyframes glow{
+  0%{box-shadow:0 0 6px var(--gold)}
+  50%{box-shadow:0 0 20px var(--gold)}
+  100%{box-shadow:0 0 6px var(--gold)}
+}
 
 /* Title */
-h1{text-align:center;color:var(--gold);margin-bottom:20px;font-size:28px}
-
-/* Contact card */
-.contact{
-  background:var(--card);box-shadow:var(--shadow);border-radius:14px;padding:25px 22px;max-width:600px;margin:0 auto 30px
+h1{
+  text-align:center;
+  color:var(--gold);
+  margin-bottom:20px;
+  font-size:28px;
 }
-.contact h2{color:var(--gold);text-align:center;margin-bottom:18px;font-size:22px}
-.contact .method{display:flex;align-items:center;gap:12px;font-size:18px;margin:14px 0}
-.contact .method i{color:var(--gold);font-size:24px}
 
-/* Nav bar */
-.nav-icons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:20px 0 30px}
-.nav-icons a{background:var(--card);padding:10px 20px;border-radius:999px;color:var(--gold);font-weight:700;text-decoration:none;
-display:flex;align-items:center;gap:6px;box-shadow:var(--shadow);transition:.25s}
-.nav-icons a:hover{transform:translateY(-4px);box-shadow:0 0 10px var(--gold);}
+/* Nav */
+.nav-icons{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin:20px 0 30px;
+}
 
-/* Footer */
-footer{text-align:center;font-size:14px;color:var(--gold);margin-top:40px}
+.nav-icons a{
+  background:var(--card);
+  padding:10px 20px;
+  border-radius:999px;
+  color:var(--gold);
+  font-weight:700;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  box-shadow:var(--shadow);
+  transition:.25s;
+}
 
-/* Buttons */
-.theme-btn{position:fixed;top:18px;right:18px;width:46px;height:46px;border:none;border-radius:50%;background:var(--gold);color:#000;
-display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;box-shadow:0 0 10px var(--gold);z-index:1001}
-.theme-btn:hover{transform:scale(1.1)}
+.nav-icons a:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 10px var(--gold);
+}
 
+/* Contact */
+.contact{
+  background:var(--card);
+  box-shadow:var(--shadow);
+  border-radius:14px;
+  padding:25px 22px;
+  max-width:600px;
+  margin:0 auto 30px;
+}
+
+.contact h2{
+  color:var(--gold);
+  text-align:center;
+  margin-bottom:18px;
+  font-size:22px;
+}
+
+.method{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:18px;
+  margin:14px 0;
+}
+
+.method i{
+  color:var(--gold);
+  font-size:24px;
+}
+
+/* Services */
 .services{
   background:var(--card);
   padding:25px 22px;
@@ -59,16 +133,18 @@ display:flex;align-items:center;justify-content:center;font-size:20px;cursor:poi
   max-width:700px;
   margin:0 auto 30px;
 }
+
 .services h2{
   color:var(--gold);
   text-align:center;
   margin-bottom:18px;
   font-size:22px;
 }
+
 .services ul{
   list-style:none;
-  padding:0;
 }
+
 .services li{
   margin:10px 0;
   font-size:16px;
@@ -76,57 +152,145 @@ display:flex;align-items:center;justify-content:center;font-size:20px;cursor:poi
   align-items:center;
   gap:8px;
 }
+
 .services li i{
   color:var(--gold);
   font-size:20px;
 }
+
+/* ===================== */
+/* 🔥 BANNERS SECTION */
+/* ===================== */
+
+.banners{
+  max-width:1000px;
+  margin:0 auto 40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+
+.banners a.card{
+  display:block;
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--card);
+  box-shadow:var(--shadow);
+  border:2px solid transparent;
+  transition:.3s;
+}
+
+.banners a.card:hover{
+  transform:translateY(-6px) scale(1.03);
+  border-color:var(--gold);
+  box-shadow:0 0 18px var(--gold);
+}
+
+.banners a.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  display:block;
+  transition:.3s;
+}
+
+.banners a.card:hover img{
+  transform:scale(1.08);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  font-size:14px;
+  color:var(--gold);
+  margin-top:40px;
+}
+
+/* Theme Button */
+.theme-btn{
+  position:fixed;
+  top:18px;
+  right:18px;
+  width:46px;
+  height:46px;
+  border:none;
+  border-radius:50%;
+  background:var(--gold);
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 0 10px var(--gold);
+  z-index:1001;
+}
+
+.theme-btn:hover{transform:scale(1.1)}
 </style>
 </head>
+
 <body class="dark">
+
 <button class="theme-btn" id="themeToggle"><i class="fas fa-sun"></i></button>
+
 <!-- Logo -->
-<img alt="شعار" class="logo" src="https://up6.cc/2025/06/174966103360021.gif"/>
-<!-- Title -->
+<img class="logo" src="https://rejawii.com/sico/19bNNZyA0.gif"/>
+
 <h1>التواصل للاستايلات والتصاميم الاحترافية</h1>
-<!-- Nav icons -->
+
+<!-- Nav -->
 <div class="nav-icons">
-<a href="https://www.njd.chat/esh.html"><i class="fas fa-list-alt"></i> الاشتراكات</a>
-<a href="https://www.njd.chat/"><i class="fas fa-scroll"></i> القوانين</a>
-<a href="https://www.njd.chat/"><i class="fas fa-comment-dots"></i> الشكاوي</a>
-<a href="https://www.njd.chat/"><i class="fas fa-comments"></i> شات نجد</a>
+<a href="https://rejawii.com/esh.html"><i class="fas fa-list-alt"></i> الاشتراكات</a>
+<a href="https://rejawii.com/"><i class="fas fa-scroll"></i> القوانين</a>
+<a href="https://rejawii.com/"><i class="fas fa-comment-dots"></i> الشكاوي</a>
+<a href="https://rejawii.com/"><i class="fas fa-comments"></i> شات رجاوي</a>
 </div>
-<!-- Contact Card -->
+
+<!-- Contact -->
 <section class="contact">
 <h2><i class="fas fa-paint-brush"></i> تواصل معي مباشرة</h2>
+
 <div class="method">
 <i class="fab fa-whatsapp"></i>
-<span>واتس أب: <a href="https://wa.me/967778436340" style="color:var(--gold);text-decoration:underline;">+967 778 436 340</a></span>
+<span>واتس أب: <a href="https://wa.me/967778436340" style="color:var(--gold)">+967 778 436 340</a></span>
 </div>
+
 <div class="method">
 <i class="fab fa-snapchat-ghost"></i>
-<span>سناب شات: <a href="https://www.snapchat.com/add/noorromas" style="color:var(--gold);text-decoration:underline;">noorromas</a></span>
+<span>سناب شات: <a href="https://www.snapchat.com/add/noorromas" style="color:var(--gold)">noorromas</a></span>
 </div>
 </section>
+
+<!-- 🔥 BANNERS -->
+<section class="banners">
+
+
+</section>
+
+<!-- Services -->
 <section class="services">
-<h2><i class="fas fa-code"></i> تصميمات وبرمجيات <span style="color:var(--gold)">رمادي ديزاين</span> لخدمات الويب</h2>
+<h2><i class="fas fa-code"></i> تصميمات وبرمجيات رمادي ديزاين</h2>
 <ul>
 <li><i class="fas fa-check-circle"></i> تصميمات استايلات احترافيه ومختلفه بجميع انواعها</li>
 <li><i class="fas fa-check-circle"></i> تصميم رومات احترافيه مع خامات جميله</li>
 <li><i class="fas fa-check-circle"></i> تصميم بنرات احترافيه شفافه وغير شفافه</li>
 <li><i class="fas fa-check-circle"></i> تصميم اعضاء بشكل احترافي وانيق وخفيف</li>
-<li><i class="fas fa-check-circle"></i> جميع المتطلبات من الخدمات التصاميم لايوجد تقليد</li>
 </ul>
-
 </section>
-<footer>© جميع الحقوق محفوظة صفحه رمادي ديزاين 2025–2028</footer>
+
+<footer>© جميع الحقوق محفوظة صفحة رمادي ديزاين 2025–2028</footer>
+
 <script>
 const toggle=document.getElementById('themeToggle');
 const icon=toggle.querySelector('i');
+
 toggle.addEventListener('click',()=>{
   document.body.classList.toggle('light');
   icon.classList.toggle('fa-sun');
   icon.classList.toggle('fa-moon');
 });
 </script>
+
 </body>
 </html>
